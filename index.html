@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>O amor mais profundo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+    body {
+      margin: 0;
+      font-family: "Playwrite DK Loopet", cursive;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    header {
+      background-color: #d4af37;
+      color: #000;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img, .gallery video {
+      width: 100%;
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+    }
+
+    .timeline {
+      border-left: 3px solid #d4af37;
+      padding-left: 1rem;
+    }
+
+    .timeline p {
+      margin: 1rem 0;
+    }
+
+    .button-container {
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .love-button {
+        font-family: "Playwrite DK Loopet", cursive;
+      background-color: #d4af37;
+      color: #000;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .love-button:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .zoomable {
+        max-width: 200px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    }
+
+    .zoomable:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    }
+
+    .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        padding-top: 60px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    .lightbox-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 10px;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: #ffd700;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    footer{
+        margin-top: 5rem;
+      font-size: 0.9rem;
+      color: #ffffff;
+      margin-left: 775px;
+      margin-bottom: 5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Bem-vinda, Amor!
+  </header>
+
+  <section>
+    <h2>Nosso oceano de memórias</h2>
+    <div class="gallery">
+      <!-- Substitua pelos seus arquivos -->
+      <img src="fotos/foto1.png" alt="Esse dia foi mágico." class="zoomable">
+      <video src="videos/video1.mp4" controls></video>
+      <img src="fotos/foto2.png" alt="A repórter mais linda do planeta inteiro." class="zoomable">
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+  </section>
+
+  <section>
+  <h2>Linha do tempo do nosso amor</h2>
+  <div class="timeline">
+    <p>🕊️ <strong>O Encontro</strong><br>
+    Num instante sereno, nossos caminhos se cruzaram. Não foi por acaso, foi destino o soprando delicadamente o tempo.</p>
+
+    <p>🌷 <strong>As Primeiras Palavras</strong><br>
+    Vieram os sorrisos tímidos, as mensagens que se estendiam pela madrugada e a sensação doce de que algo especial estava nascendo.</p>
+
+    <p>🌙 <strong>O Encanto</strong><br>
+    Descobrimos afinidades, nos perdemos em conversas, e cada risada era como uma onda que lavava a alma.</p>
+
+    <p>🌺 <strong>Os Momentos</strong><br>
+    As risadas, as brincadeiras, os olhares e até os silêncios, tudo foi guardado em um lugar secreto no meu coração.</p>
+
+    <p>🌊 <strong>Hoje</strong><br>
+    Estamos aqui. Com a certeza de que esse sentimento é profundo, como o oceano você ama, e tão brilhante quanto o dourado que te faz sorrir.</p>
+
+    <p>💫 <strong>O Amanhã</strong><br>
+    É um convite. Para mergulharmos juntas em um amor que só cresce. Um passo adiante. Um novo capítulo. Uma promessa.</p>
+  </div>
+</section>
+
+
+  <section>
+    <h2>Uma mensagem para você</h2>
+    <p>
+      Você é a onda mais suave do meu oceano e a estrela mais brilhante do meu céu. Quero estar ao seu lado para sempre. Vamos transformar esse sentimento em algo ainda mais lindo?
+    </p>
+  </section>
+
+  <div class="button-container">
+    <button class="love-button" onclick="window.location.href='../pedido.html'">
+      Clique para desbloquear o final verdadeiro
+    </button>
+  </div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const close = document.querySelector('.close');
+
+  document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  close.onclick = () => {
+    lightbox.style.display = 'none';
+  };
+
+  window.onclick = event => {
+    if (event.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  };
+</script>
+
+<footer>
+    Não consegui arrumar as mídias lá em cima 😭
+</footer>
+</body>
+</html>
